@@ -19,8 +19,8 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-ink text-onDark border-b border-graphite">
-      <div className="max-w-container mx-auto px-4 lg:px-8">
+    <header className="sticky top-0 z-50 bg-ink/80 text-onDark backdrop-blur-xl">
+      <div className="max-w-container mx-auto px-4 lg:px-8 relative">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="font-heading font-bold text-xl">
             Marco Sarro <span className="text-primary">Detailing</span>
@@ -97,6 +97,7 @@ export function Header() {
             </SheetContent>
           </Sheet>
         </div>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
       </div>
     </header>
   );
