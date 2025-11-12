@@ -1,3 +1,4 @@
+import { Page } from '@/components/motion/Page';
 import { Hero } from '@/components/shared/Hero';
 import { ServiceCard } from '@/components/shared/ServiceCard';
 import { BreadcrumbNav } from '@/components/ui/breadcrumb-nav';
@@ -63,7 +64,7 @@ const services = [
 
 export default function ServiziPage() {
   return (
-    <>
+    <Page>
       <BreadcrumbNav items={[{ label: 'Servizi' }]} />
 
       <Hero
@@ -94,6 +95,6 @@ export default function ServiziPage() {
           </p>
         </div>
       </section>
-    </>
+    </Page>
   );
 }

@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import { Page } from '@/components/motion/Page';
 import { Hero } from '@/components/shared/Hero';
 import { BreadcrumbNav } from '@/components/ui/breadcrumb-nav';
 import { Shield, Award, Users, Clock } from 'lucide-react';
 
 export default function IlCentroPage() {
   return (
-    <>
+    <Page>
       <BreadcrumbNav items={[{ label: 'Il Centro' }]} />
 
       <Hero
@@ -97,6 +98,6 @@ export default function IlCentroPage() {
           </div>
         </div>
       </section>
-    </>
+    </Page>
   );
 }

@@ -1,3 +1,4 @@
+import { Page } from '@/components/motion/Page';
 import { Hero } from '@/components/shared/Hero';
 import { ServiceCard } from '@/components/shared/ServiceCard';
 import { ProductCard } from '@/components/shared/ProductCard';
@@ -83,7 +84,7 @@ const reviews = [
 
 export default function Home() {
   return (
-    <>
+    <Page>
       <Hero
         badge="Centro Detailing Certificato"
         subtitle="Cura Professionale Auto"
@@ -217,6 +218,6 @@ export default function Home() {
           </Button>
         </div>
       </section>
-    </>
+    </Page>
   );
 }
