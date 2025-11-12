@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, type Transition } from 'framer-motion';
 
 type PageProps = {
   children: React.ReactNode;
@@ -22,7 +22,7 @@ const pageVariants = {
   },
 };
 
-const pageTransition = {
+const pageTransition: Transition = {
   type: 'tween',
   ease: [0.2, 0.8, 0.2, 1],
   duration: 0.42,
