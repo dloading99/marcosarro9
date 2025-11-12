@@ -1,3 +1,4 @@
+import { Page } from '@/components/motion/Page';
 import { Hero } from '@/components/shared/Hero';
 import { ProductCard } from '@/components/shared/ProductCard';
 import { BreadcrumbNav } from '@/components/ui/breadcrumb-nav';
@@ -52,7 +53,7 @@ const products = [
 
 export default function ShopPage() {
   return (
-    <>
+    <Page>
       <BreadcrumbNav items={[{ label: 'Shop' }]} />
 
       <Hero
@@ -72,6 +73,6 @@ export default function ShopPage() {
           </div>
         </div>
       </section>
-    </>
+    </Page>
   );
 }

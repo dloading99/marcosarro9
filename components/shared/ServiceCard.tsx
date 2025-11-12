@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Check } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Reveal } from '@/components/motion/Reveal';
 
 interface ServiceCardProps {
   title: string;
@@ -16,10 +17,11 @@ interface ServiceCardProps {
 
 export function ServiceCard({ title, description, price, duration, benefits, badge, imageSrc, href }: ServiceCardProps) {
   return (
-    <Link href={href} className="block group">
-      <div className="bg-white rounded-card shadow-card overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.04] h-full">
-        <div className="aspect-video relative overflow-hidden">
-          <Image
+    <Reveal>
+      <Link href={href} className="block group">
+        <div className="bg-white rounded-card shadow-card overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.04] h-full">
+          <div className="aspect-video relative overflow-hidden">
+            <Image
             src={imageSrc}
             alt={title}
             fill
@@ -52,5 +54,6 @@ export function ServiceCard({ title, description, price, duration, benefits, bad
         </div>
       </div>
     </Link>
+    </Reveal>
   );
 }

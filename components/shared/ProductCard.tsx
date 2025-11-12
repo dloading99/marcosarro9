@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { ShoppingCart } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Reveal } from '@/components/motion/Reveal';
 
 interface ProductCardProps {
   title: string;
@@ -17,10 +18,11 @@ interface ProductCardProps {
 
 export function ProductCard({ title, description, price, originalPrice, badge, imageSrc, href, inStock = true }: ProductCardProps) {
   return (
-    <div className="bg-white rounded-card shadow-card overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.04] h-full flex flex-col">
-      <Link href={href} className="block">
-        <div className="aspect-video relative overflow-hidden">
-          <Image
+    <Reveal>
+      <div className="bg-white rounded-card shadow-card overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.04] h-full flex flex-col">
+        <Link href={href} className="block">
+          <div className="aspect-video relative overflow-hidden">
+            <Image
             src={imageSrc}
             alt={title}
             fill
@@ -67,5 +69,6 @@ export function ProductCard({ title, description, price, originalPrice, badge, i
         </div>
       </div>
     </div>
+    </Reveal>
   );
 }

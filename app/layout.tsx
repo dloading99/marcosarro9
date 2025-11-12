@@ -1,12 +1,12 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Manrope } from 'next/font/google';
+import { Inter, Fraunces } from 'next/font/google';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { SmoothScrollProvider } from '@/lib/smooth-scroll';
+import { Providers } from './providers';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-body' });
-const manrope = Manrope({ subsets: ['latin'], variable: '--font-heading' });
+const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-heading' });
 
 export const metadata: Metadata = {
   title: 'Marco Sarro Detailing - Cura Professionale Auto',
@@ -20,12 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="it">
-      <body className={`${inter.variable} ${manrope.variable} font-body bg-base text-onLight antialiased`}>
-        <SmoothScrollProvider>
-          <Header />
+      <body className={`${inter.variable} ${fraunces.variable} font-body bg-base text-onLight antialiased`}>
+        <Header />
+        <Providers>
           <main className="min-h-screen">{children}</main>
-          <Footer />
-        </SmoothScrollProvider>
+        </Providers>
+        <Footer />
       </body>
     </html>
   );

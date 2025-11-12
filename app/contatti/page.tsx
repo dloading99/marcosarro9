@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Page } from '@/components/motion/Page';
 import { BreadcrumbNav } from '@/components/ui/breadcrumb-nav';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -12,7 +13,7 @@ export default function ContattiPage() {
   const [step, setStep] = useState(1);
 
   return (
-    <>
+    <Page>
       <BreadcrumbNav items={[{ label: 'Visita & Contatti' }]} />
 
       <section className="py-16 bg-base">
@@ -257,6 +258,6 @@ export default function ContattiPage() {
           </div>
         </div>
       </section>
-    </>
+    </Page>
   );
 }

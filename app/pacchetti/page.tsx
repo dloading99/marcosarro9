@@ -1,3 +1,4 @@
+import { Page } from '@/components/motion/Page';
 import { Hero } from '@/components/shared/Hero';
 import { BreadcrumbNav } from '@/components/ui/breadcrumb-nav';
 import { Button } from '@/components/ui/button';
@@ -52,7 +53,7 @@ const packages = [
 
 export default function PacchettiPage() {
   return (
-    <>
+    <Page>
       <BreadcrumbNav items={[{ label: 'Pacchetti & Offerte' }]} />
 
       <Hero
@@ -126,6 +127,6 @@ export default function PacchettiPage() {
           </div>
         </div>
       </section>
-    </>
+    </Page>
   );
 }
